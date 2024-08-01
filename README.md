@@ -45,6 +45,8 @@ To identify donor candidates who were listed with a diagnosis associated with an
 
 The `DIAG` field was collected from 1987 onward, and the `DGN_TCR` and `DGN2_TCR` were collected from 1994 onward, according to the STAR file data dictionary.
 
+As with the `has_tx` field, we also applied a flag, `alcohol_diagnosis`, on candidates with an alcohol-related liver disease for _every_ event record associated with that candidate. (As with our other calculations, candidate counts for subsets of the data are the number of unique `PT_CODE` values in that subset.)
+
 ## Running the notebook
 First, you'll need to [request a copy of the STAR file](https://optn.transplant.hrsa.gov/data/view-data-reports/request-data/) from UNOS. We put the data files in the `data` folder and documentation in the `docs` folder.
 
