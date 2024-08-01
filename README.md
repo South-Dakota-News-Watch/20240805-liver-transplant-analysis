@@ -1,5 +1,5 @@
 # 20240805-liver-transplant-analysis
-This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation to reproduce the findings in ["TK,"](TK) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
+This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation below to reproduce the findings in ["TK,"](TK) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
 
 - [Data overview](#Data-overview)
 - [Running the notebook](#Running-the-notebook)
@@ -36,12 +36,12 @@ The data include both living and dead donors. Donors are uniquly identifed by th
 UNOS doesn't collect data on alcohol use by candidates specifically, although, according to an email from UNOS,
 >Especially for liver transplant candidates, I believe many centers have requirements for their candidates that they abstain from alcohol use as a condition of being listed.
 
-To identify donor candidates who were listed with a diagnosis associated with an alcohol-related disease, we filtered based on the diagnostic codes associated with alcohol-related disease (found in fields `DGN_TCR`, `DGN2_TCR`, or `DIAG`). According to UNOS, these are:
-- 4215 – Alcoholic Cirrhosis
-- 4216 – Alcoholic Cirrhosis with Hepatitis C
-- 4217 – Acute Alcoholic Hepatitis
-- 4218 – Acute Alcohol-Associated Hepatitis with or without Cirrhosis
-- 4219 – Alcohol-Associated Cirrhosis without Acute Alcohol-Associated Hepatitis
+To identify donor candidates who were listed with a diagnosis associated with an alcohol-related disease, we filtered based on diagnostic code values in fields `DGN_TCR`, `DGN2_TCR`, or `DIAG`. According to UNOS, the diagnostic codes associated with alcohol-related disease are:
+- `4215` – Alcoholic Cirrhosis
+- `4216` – Alcoholic Cirrhosis with Hepatitis C
+- `4217` – Acute Alcoholic Hepatitis
+- `4218` – Acute Alcohol-Associated Hepatitis with or without Cirrhosis
+- `4219` – Alcohol-Associated Cirrhosis without Acute Alcohol-Associated Hepatitis
 
 The `DIAG` field was collected from 1987 onward, and the `DGN_TCR` and `DGN2_TCR` were collected from 1994 onward, according to the STAR file data dictionary.
 
@@ -49,5 +49,5 @@ The `DIAG` field was collected from 1987 onward, and the `DGN_TCR` and `DGN2_TCR
 First, you'll need to [request a copy of the STAR file](https://optn.transplant.hrsa.gov/data/view-data-reports/request-data/) from UNOS. We put the data files in the `data` folder and documentation in the `docs` folder.
 
 - Clone or download this repo and `cd` into the project directory
-- Install the dependencies (`jupyterlab`, `pandas` and `bs4`) into a virtual environment: `pip install -r requirements.txt`
+- Install the dependencies (`jupyterlab`, `pandas`, `bs4` and `openpyxl`) into a virtual environment: `pip install -r requirements.txt`
 - `jupyter lab`
