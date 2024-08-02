@@ -7,7 +7,7 @@ This repository includes a [code notebook](liver-transplant-findings.ipynb) and 
 ## Data overview
 The United Network for Organ Sharing (UNOS) provided us with a copy of its [STAR file](https://optn.transplant.hrsa.gov/data/view-data-reports/request-data/) (tab-delimited version) on July 31, 2024. Access to the data and documentation requires a signed data use agreement with UNOS, so we're not including those files here. [The public data dictionary is here](https://optn.transplant.hrsa.gov/media/1swp2gge/optn-star-files-data-dictionary.xlsx) (XLSX).
 
-Data coverage is October 1987 through June 2024, though our analysis looks only at data beginning in listing year 1988, the first full year of data.
+Data coverage is October 1987 through June 2024, though our analysis looks only at data beginning in listing year 1994, the year that some transplant data fields included in our analysis began collecting data.
 
 The main files for data on transplants for each organ system are tab-delimited `.DAT` files without headers. The [`get_df() function in utils.py`](utils.py) reads in column names from the `.htm` files that accompany each `.DAT` file and uses these to build a pandas dataframe.
 
