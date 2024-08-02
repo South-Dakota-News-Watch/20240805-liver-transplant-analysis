@@ -1,5 +1,5 @@
 # 20240805-liver-transplant-analysis
-This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation below to reproduce the findings in ["TK,"](TK) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
+This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation below to reproduce the findings in ["35, dry and dying: The impact of booze on 1 man,"](TK) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
 
 - [Data overview](#Data-overview)
 - [Running the notebook](#Running-the-notebook)
@@ -33,10 +33,7 @@ In cases where we needed to deduplicate the data to examine an individual candid
 The data include both living and dead donors. Donors are uniquly identifed by the value in the `DONOR_ID` column.
 
 ### Alcohol use
-UNOS doesn't collect data on alcohol use by candidates specifically, although, according to an email from UNOS,
->Especially for liver transplant candidates, I believe many centers have requirements for their candidates that they abstain from alcohol use as a condition of being listed.
-
-To identify donor candidates who were listed with a diagnosis associated with an alcohol-related disease, we filtered based on diagnostic code values in fields `DGN_TCR`, `DGN2_TCR`, or `DIAG`. According to UNOS, the diagnostic codes associated with alcohol-related disease are:
+UNOS doesn't collect data on alcohol use by candidates specifically, so we used the listing diagnosis as a proxy. To identify donor candidates who were listed with a diagnosis associated with an alcohol-related liver disease, we filtered based on diagnostic code values in fields `DGN_TCR`, `DGN2_TCR`, or `DIAG`. According to UNOS, the diagnostic codes associated with alcohol-related disease are:
 - `4215` – Alcoholic Cirrhosis
 - `4216` – Alcoholic Cirrhosis with Hepatitis C
 - `4217` – Acute Alcoholic Hepatitis
