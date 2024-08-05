@@ -1,5 +1,5 @@
 # 20240805-liver-transplant-analysis
-This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation below to reproduce the findings in ["35, dry and dying: The impact of booze on 1 man,"](TK) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
+This repository includes a [code notebook](liver-transplant-findings.ipynb) and supporting documentation below to reproduce the findings in ["Alcohol's impact: 35, dry and dying while waiting for a transplant,"](https://www.sdnewswatch.org/chronic-liver-disease-cirrhosis-killing-south-dakota-30-year-olds/) an article by Megan Luther published Aug. 5, 2024, for South Dakota News Watch. Cody Winchester analyzed the data.
 
 - [Data overview](#Data-overview)
 - [Running the notebook](#Running-the-notebook)
